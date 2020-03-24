@@ -1,0 +1,92 @@
+package login_pro;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSeparator;
+
+public class Login_P {
+
+	private JFrame frame;
+	private JTextField txtUsername;
+	private JPasswordField txtPassword;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login_P window = new Login_P();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Login_P() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(200, 200, 500, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblLoginSystem = new JLabel("Login System");
+		lblLoginSystem.setBounds(211, 11, 125, 14);
+		frame.getContentPane().add(lblLoginSystem);
+		
+		JLabel lblUsername = new JLabel("Username");
+		lblUsername.setBounds(53, 78, 85, 17);
+		frame.getContentPane().add(lblUsername);
+		
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setBounds(54, 134, 84, 14);
+		frame.getContentPane().add(lblPassword);
+		
+		txtUsername = new JTextField();
+		txtUsername.setBounds(148, 75, 112, 20);
+		frame.getContentPane().add(txtUsername);
+		txtUsername.setColumns(10);
+		
+		txtPassword = new JPasswordField();
+		txtPassword.setBounds(148, 131, 112, 20);
+		frame.getContentPane().add(txtPassword);
+		
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//Calling the database right here. Will return valid and or invalid.
+			}
+		});
+		btnLogin.setBounds(191, 190, 89, 23);
+		frame.getContentPane().add(btnLogin);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(10, 171, 466, 8);
+		frame.getContentPane().add(separator);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(10, 36, 466, 8);
+		frame.getContentPane().add(separator_1);
+	}
+}
