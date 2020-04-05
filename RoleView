@@ -1,0 +1,90 @@
+package Table_View;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+
+public class Role_V {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Role_V window = new Role_V();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Role_V() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setForeground(Color.WHITE);
+		frame.getContentPane().setBackground(new Color(102, 0, 255));
+		frame.setBounds(100, 100, 558, 437);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblRoleMenu = new JLabel("Role Menu");
+		lblRoleMenu.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRoleMenu.setFont(new Font("Franklin Gothic Medium", Font.PLAIN, 33));
+		lblRoleMenu.setBounds(179, 11, 201, 76);
+		frame.getContentPane().add(lblRoleMenu);
+		
+		JButton btnWaiter = new JButton("Waiter");
+		btnWaiter.setBackground(UIManager.getColor("desktop"));
+		btnWaiter.setForeground(Color.BLACK);
+		btnWaiter.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnWaiter.setBounds(10, 173, 134, 91);
+		frame.getContentPane().add(btnWaiter);
+		
+		JButton btnManager = new JButton("Manager");
+		btnManager.setBackground(UIManager.getColor("desktop"));
+		btnManager.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btnManager.setBounds(209, 169, 134, 96);
+		frame.getContentPane().add(btnManager);
+		
+		JButton btnCook = new JButton("Cook");
+		btnCook.setBackground(UIManager.getColor("desktop"));
+		btnCook.setFont(new Font("Tahoma", Font.PLAIN, 22));
+		btnCook.setBounds(400, 168, 134, 96);
+		frame.getContentPane().add(btnCook);
+		
+		JButton btnLogout = new JButton("Logout");
+		btnLogout.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnLogout.setBounds(445, 366, 89, 23);
+		frame.getContentPane().add(btnLogout);
+	}
+}
