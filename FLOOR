@@ -1,0 +1,66 @@
+package Floor_pkg;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import java.awt.Color;
+
+public class Floor_M {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Floor_M window = new Floor_M();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Floor_M() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setBackground(Color.WHITE);
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JButton btnTable = new JButton("Table 1");
+		btnTable.setBounds(10, 44, 89, 49);
+		frame.getContentPane().add(btnTable);
+		
+		JButton btnTable_1 = new JButton("Table 2");
+		btnTable_1.setBounds(337, 44, 89, 49);
+		frame.getContentPane().add(btnTable_1);
+		
+		JButton btnTables = new JButton("Tables 3");
+		btnTables.setBounds(176, 111, 89, 49);
+		frame.getContentPane().add(btnTables);
+		
+		JButton btnTable_2 = new JButton("Table 4");
+		btnTable_2.setBounds(10, 203, 89, 49);
+		frame.getContentPane().add(btnTable_2);
+		
+		JButton btnTable_3 = new JButton("Table 5");
+		btnTable_3.setBounds(337, 203, 89, 49);
+		frame.getContentPane().add(btnTable_3);
+	}
+}
