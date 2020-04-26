@@ -1,0 +1,80 @@
+//Manager can modify user 
+package users;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+
+public class users {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					users window = new users();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public users() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setForeground(Color.WHITE);
+		frame.getContentPane().setBackground(new Color(102, 0, 255));
+		frame.setBounds(200, 200, 500, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+	
+      
+		JButton btnCancel = new JButton("Add User");
+	   btnCancel.setBackground(UIManager.getColor("desktop"));
+		btnCancel.setForeground(Color.BLACK);
+		btnCancel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnCancel.setBounds(54, 78, 200, 30);
+		frame.getContentPane().add(btnCancel);
+		
+		JButton btnsettle = new JButton("Delete User");
+		btnsettle.setBackground(UIManager.getColor("desktop"));
+		btnsettle.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnsettle.setBounds(54, 134, 200, 30);
+		frame.getContentPane().add(btnsettle);
+		
+		JButton btnAdd_Modify = new JButton("Edit User");
+		btnAdd_Modify.setBackground(UIManager.getColor("desktop"));
+		btnAdd_Modify.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		btnAdd_Modify.setBounds(54, 190, 200, 30);
+		frame.getContentPane().add(btnAdd_Modify);
+      
+  
+	}
+}
